@@ -27,3 +27,23 @@ Topic: Can we predict which airlines will be most likely delayed
 •	Does departure and destination affect delays?
 •	What are/mode causes of the delays?
 
+
+5) Segment 1:
+•	Upload csv in Jupyter
+•	Merge Csv in Jupyter
+•	Clean up data in Jupyter
+•	Connect the database to Jupyter notebook
+•	Move clean data to Postgres database using Pyspark
+•	Use machine learning model
+•	We will be using flight date, carrier, destination,  origin and destination to describe the 
+arrival delay
+•	Use Plotlib:
+•	For visualization to answer which airlines have the least/most delays, and which months have the most delays 
+•	To compare airlines and their air-time and elapsed time
+•	To find taxi-in and taxi-out delays in each airport
+•	Our machine learning model will answer the question based on what origin airline and 
+destination to predict the arrival delay using carrier, flight date, wheels on and off.
+•	Our machine learning model will also predict the delays of the flights
+•	Our machine learning model will answer the question which airports have the longest time do airplanes have to wait before letting passengers out
+
+•   
