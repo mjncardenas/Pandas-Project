@@ -43,4 +43,7 @@ Topic: Can we predict which airlines will be most likely delayed?
 •	Our machine learning model will answer the question based on what origin airline and destination to predict the arrival delay using carrier, flight date, wheels on and off.
 •	Our machine learning model will also predict the delays of the flights
 •	Our machine learning model will answer the question which airports have the longest time do airplanes have to wait before letting passengers out
-   
+
+
+6) Google Slides   
+https://docs.google.com/presentation/d/1OwAqNvC6R_ztFjqak5jTbcJXZBwkI31_YG8IKfRAUPQ/edit?usp=sharing
