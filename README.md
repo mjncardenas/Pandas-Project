@@ -6,13 +6,14 @@ Communication Protocol
 3)	For emergencies, we have each other’s cell phone numbers. We will call or text one another if we need to contact one another right awat
 
 Presentation
-Topic: Can we predict which airlines will be most likely delayed?
+Topic: Can we predict which airports will be most likely delayed and what days/times are they most delayed?
 
 1)	What does your group hope to achieve?
-•	We would like to predict delays time for flights
-•	We are planning to use the datasets to identify which airlines have the most delays. 
-•	We also would like to identify what days and months have the most delays. 
-•	We would also like to predict delays based on several features
+•	We would like to predict delays time for flights 
+•   We are planning to use the datasets to identify which airports have the most delays. 
+•   We also would like to identify what days and months have the most delays. 
+•   We would like to identify which day of the week are airports the busiest
+•   We would like to identify if delays occur more in the west coast of the US or east coast of the US.
 
 2) Why did you select this topic?
 •	We like to travel and improve our travel experience
@@ -21,11 +22,10 @@ Topic: Can we predict which airlines will be most likely delayed?
 •	We have found the datasets in Kaggle
 
 4) Questions they hope to answer with the data
-•	Which airlines have the least/most delays?
-•	Are most of the delays correlated with the weather?
-•	Which days/months have the most delays?
-•	Does departure and destination affect delays?
-•	What are/mode causes of the delays?
+•	Which destinations cause the least and most delays for Southwest Airlines?
+•	What are the airports with the most delays?
+•	Which day of the week has the most delays?
+•   Do east coast airports have more delays than west coast airports?
 
 5) Plans
 •	Upload csv in Jupyter
