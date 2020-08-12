@@ -4,3 +4,4 @@ Resources/CSV/
 # Remove unnecessary files
 __pycache__
 .ipynb_checkpoints/
+*.pdf
