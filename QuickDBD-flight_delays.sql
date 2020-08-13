@@ -8,8 +8,8 @@ CREATE TABLE "flight_data" (
     "fl_num" INT   NOT NULL,
     "origin" INT   NOT NULL,
     "dest" INT   NOT NULL,
-    "flight_status" INT   NOT NULL,
-    "weekday" INT   NOT NULL,
+    "flight_status" VARCHAR   NOT NULL,
+    "weekday" VARCHAR   NOT NULL,
     CONSTRAINT "pk_flight_data" PRIMARY KEY (
         "flight_id"
      )
