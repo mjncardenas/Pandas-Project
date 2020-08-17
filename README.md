@@ -49,3 +49,5 @@ Topic: Can we predict which airports will be most likely delayed and what days/t
 
 6) Google Slides   
 https://docs.google.com/presentation/d/1OwAqNvC6R_ztFjqak5jTbcJXZBwkI31_YG8IKfRAUPQ/edit?usp=sharing
+
+https://docs.google.com/presentation/d/1TuF1_l5AwxgvbOCYwFYlXY_Ghcyn62s73fqBKCvWS-M/edit?usp=sharing
