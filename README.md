@@ -1,19 +1,23 @@
 # Flight Delays
-Communication Protocol
 
 ## Abstract
 
 ## Discussion
 
+#### Preliminary Data Processing
+
+Flight data from 2009 was selected out of the Kaggle dataset due to the sheer size of data in each CSV file. Then the team seclected a single airline by selecting the callsign, 'OO', SkyWest Airlines and dropping the rest of the data. A NaN check was conducted and all NaNs were dropped. The data then needed to be transformed before continuing. Flight data required to be changed to the timestamp, then converted to a weekday, and then the weekday name. Delay status required to be changed to an integer type for machine learning. Then dataframes were created for each table to load into the database. These four tables are flight data, airport, flight status, and days of the week. The cleaned data was then uploaded to the PostgreSQL database and downloaded into the machine learning notebook using SQLalchemy.
+
+#### Machine Learning
+
+The model's target is 'flight status' and the rest of the data remained as features. Dummy variables were assigned to the data and then split into train and test sets, using the default ratio. The machine learning model used in this project is a random forest model to avoid overfitting, the ability to rank significance of input variables, and beacuse it can run efficiently with large data sets. The downside to using this model is that it is a blackbox model.
+
+
+
 ## Conclusion
 
-### Communication Protocol
-
-#### Project Outline
-​
-1)	We will use zoom at least 2 times a week to discuss what we have accomplished
-2)	We will use slack and email to talk to each other on a daily basis or when we have a question.
-3)	For emergencies, we have each other’s cell phone numbers
+##### Communication Protocol
+We will use zoom at least 2 times a week to discuss what we have accomplished. We will use slack and email to talk to each other on a daily basis or when we have a question For emergencies, we have each other’s cell phone numbers.
 ​
 Presentation
 Topic: Can we predict which airlines will be most likely delayed
