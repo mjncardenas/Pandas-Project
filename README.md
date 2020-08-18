@@ -18,7 +18,7 @@ The model's target is 'flight status' and the rest of the data remained as featu
 
 #### First Model
 
-The first random forest model had an accuracy of around 60% [[Figure 1]]{Figure 1). While this model can answer the team's question, "Which flights will be delayed?," it is a mediocre model. The features used in model one were: flight_id, fl_num, origin, dest, flight_status, and weekday. One error in the model is having flight_id as one of the features. Flight ID does not provide any useful information for the random forest. Another issue is having fl_num, origin, and dest as as features as well. Flight number, origin, and destinaton are collinear because each route is assinged a specific flight number. The issue here is colinearity will confound the model: "Collinearity tends to inflate the variance of at least one estimated regression coefficient,ˆβj.This can cause at least some regression coef-ficients to have the wrong sign [[3]](#3)." The sorted features by importance shows low percentages for each of the flight numbers and weekdays. The team hoped by removing the collinear features, these importance scores could be increased. Another issue with the model is its low F-1 score. In a travel scenario being late or early can cause issues for the traveller. Thus, a balance between precision and recall is required [[4]](#4).
+The first random forest model had an accuracy of around 60% [[Figure 1]](Figure 1). While this model can answer the team's question, "Which flights will be delayed?," it is a mediocre model. The features used in model one were: flight_id, fl_num, origin, dest, flight_status, and weekday. One error in the model is having flight_id as one of the features. Flight ID does not provide any useful information for the random forest. Another issue is having fl_num, origin, and dest as as features as well. Flight number, origin, and destinaton are collinear because each route is assinged a specific flight number. The issue here is colinearity will confound the model: "Collinearity tends to inflate the variance of at least one estimated regression coefficient,ˆβj.This can cause at least some regression coef-ficients to have the wrong sign [[3]](#3)." The sorted features by importance shows low percentages for each of the flight numbers and weekdays [[Figure 2]](Figure 2). The team hoped by removing the collinear features, these importance scores could be increased. Another issue with the model is its low F-1 score. In a travel scenario being late or early can cause issues for the traveller. Thus, a balance between precision and recall is required [[4]](#4).
 
 #### Second Model
 
@@ -66,6 +66,11 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 
 
 <a id='Figure 1'>[Figure 1]</a>
+
+
+
+
+
 ![Confusion Matrix #1](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_first_instance_confusion_matrix.png)
 
 
@@ -75,6 +80,11 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 
 
 <a id='Figure 2'>[Figure 2]</a>
+
+
+
+
+
 ![Sorted Feature Importance #1](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_first_instance_sorted_features.png)
 
 
