@@ -65,7 +65,8 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 
 
 
-<a id='Figure 1'>[Figure 1]</a> !(https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_first_instance_confusion_matrix.png)
+<a id='Figure 1'>[Figure 1]</a>
+![Confusion Matrix #1](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_first_instance_confusion_matrix.png)
 
 
 
@@ -73,7 +74,8 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 
 
 
-<a id='Figure 2'>[Figure 2]</a> ![Sorted Feature Importance #1](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_first_instance_sorted_features.png)
+<a id='Figure 2'>[Figure 2]</a>
+![Sorted Feature Importance #1](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_first_instance_sorted_features.png)
 
 
 
