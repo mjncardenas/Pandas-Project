@@ -1,6 +1,7 @@
 # Flight Delays
 
 ## Abstract
+The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week.
 
 ## Discussion
 
@@ -16,8 +17,14 @@ The model's target is 'flight status' and the rest of the data remained as featu
 
 ## Conclusion
 
+ipsum lorem
+
 ##### Communication Protocol
-We will use zoom at least 2 times a week to discuss what we have accomplished. We will use slack and email to talk to each other on a daily basis or when we have a question For emergencies, we have each other’s cell phone numbers.
+
+* Biweekly zoom meetings
+* Communication via Slack or email will occurr daily
+* In emergencies: call team member
+
 ​
 Presentation
 Topic: Can we predict which airlines will be most likely delayed
@@ -26,7 +33,6 @@ Topic: Can we predict which airlines will be most likely delayed
 •	We would like to predict delays time for flights
 •	We are planning to use the datasets to identify which airlines have the most delays. 
 •	We also would like to identify what days and months have the most delays. 
-•	We would also like to predict delays based on several features
 ​
 2) Why did you select this topic?
 •	We like to travel and improve our travel experience
