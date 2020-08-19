@@ -1,11 +1,24 @@
 # Pandas-Project
-Communication Protocol
+Flight Delays
+##Abstract
 
-1)	We will use zoom at least 2 times a week to discuss what we have accomplished
+The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel and we want to improve our travel experience. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [1]. The orginal data source is from the United States Department of Transportaton [2].
+
+##Discussion
+###Preliminary Data Processing
+
+Flight data from 2009 was selected out of the Kaggle dataset due to the sheer size of data in each CSV file. Then the team seclected a single airline by selecting the callsign, 'OO', SkyWest Airlines and dropping the rest of the data. A NaN check was conducted and all NaNs were dropped. The data then needed to be transformed before continuing. Flight data required to be changed to the timestamp, then converted to a weekday, and then the weekday name. Delay status required to be changed to an integer type for machine learning. Then dataframes were created for each table to load into the database. These four tables are flight data, airport, flight status, and days of the week. The cleaned data was then uploaded to the PostgreSQL database and downloaded into the machine learning notebook using SQLalchemy.
+Machine Learning Model
+
+The model's target is 'flight status' and the rest of the data remained as features. Dummy variables were assigned to the data and then split into train and test sets, using the default ratio. The machine learning model used in this project is a random forest model to avoid overfitting, the ability to rank significance of input variables, and beacuse it can run efficiently with large data sets. The downside to using this model is the user cannot determine how the random forest model arrived to its answer.
+
+##Communication Protocol
+
+1)	We will mee through zoom at least 2 times a week to discuss what we have accomplished
 2)	We will use slack and email to talk to each other on a daily basis or when we have a question.
 3)	For emergencies, we have each other’s cell phone numbers. We will call or text one another if we need to contact one another right awat
 
-Presentation
+## Presentation
 Topic: Can we predict which airports will be most likely delayed and what days/times are they most delayed?
 
 1)	What does your group hope to achieve?
@@ -23,28 +36,35 @@ Topic: Can we predict which airports will be most likely delayed and what days/t
 
 4) Questions they hope to answer with the data
 •	Which destinations cause the least and most delays for Southwest Airlines?
+        Flights from Denver to Aspen has the most delays
 •	What are the airports with the most delays?
+        Airports with the most delay is Salt Lake City
 •	Which day of the week has the most delays?
-•   Do east coast airports have more delays than west coast airports?
+        Fridays has the most delays, followed by Monday
 
-5) Plans
-•	Upload csv in Jupyter
-•	Merge Csv in Jupyter
-•	Clean up data in Jupyter
-•	Connect the database to Jupyter notebook
-•	Move clean data to Postgres database using Pyspark
-•	Use machine learning model
-•	We will be using flight date, carrier, destination,  origin and destination to describe the arrival delay
 
-• Use Plotlib:
-•	For visualization to answer which airlines have the least/most delays, and which months have the most delays 
-•	To compare airlines and their air-time and elapsed time
-•	To find taxi-in and taxi-out delays in each airport
+5) Project Outline
 
-• Machine Learning
-•	Our machine learning model will answer the question based on what origin airline and destination to predict the arrival delay using carrier, flight date, wheels on and off.
-•	Our machine learning model will also predict the delays of the flights
-•	Our machine learning model will answer the question which airports have the longest time do airplanes have to wait before letting passengers out
+    Upload data CSV file into a Jupyter Notebook for cleaning
+    Send raw data to Tableu for dashboard creation
+    Clean data using Pandas
+    Create dataframes to send to Postgres database
+    Crete sqlalchemy connection with database
+    Write dataframes to database
+    Create new Jupyter Notebook for machine learning model
+    Upload clean data from database
+    Create machine learning model
+    Execute model and create confusion matrix
+
+References
+
+[1] https://www.kaggle.com/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018?select=2011.csv
+
+[2] https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time
+
+[3] http://www.stat.tamu.edu/~hart/652/collinear.pdf
+
+[4] https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 
 
 6) Google Slides   
