@@ -22,6 +22,7 @@ The first random forest model had an accuracy of around 60% (Figure 1). While th
 
 #### Second Model
 
+The second random forest model had an accuracy of around 60% (Figure 3). Unfortunately, this was a minor improvement. The features sued in the moderl were: fl_num, flight_status, and weekday. The output for features sorted by importance barely changed [Figure 4]. 
 
 
 ## Conclusion
@@ -86,6 +87,38 @@ Figure 2
 
 
 ![Sorted Feature Importance #1](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_first_instance_sorted_features.png)
+
+
+
+
+Figure 3
+
+
+
+
+
+![Confusion Matrix #2](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_second_instance_confusion_matrix.png)
+
+
+
+
+
+
+
+Figure 4
+
+
+
+
+
+![Sorted Feature Importance #2](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_second_instance_sorted_features.png)
+
+
+
+
+
+
+
 
 
 
