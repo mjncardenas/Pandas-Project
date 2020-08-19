@@ -58,27 +58,6 @@ The current random forest model is decent at predicting delayed, on-time, and ea
 9. Create a machine learning model
 10. Execute model and create confusion matrix
 
-##### References
-
-<a id='1'>[1]</a>
-https://www.kaggle.com/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018?select=2011.csv
-
-<a id='2'>[2]</a>
-https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time
-
-<a id='3'>[3]</a>
-http://www.stat.tamu.edu/~hart/652/collinear.pdf
-
-<a id='4'>[4]</a>
-https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
-
-
-
-
-
-
-
-
 
 Figure 1
 
@@ -135,6 +114,22 @@ Figure 4
 
 
 
+
+
+
+##### References
+
+<a id='1'>[1]</a>
+https://www.kaggle.com/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018?select=2011.csv
+
+<a id='2'>[2]</a>
+https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time
+
+<a id='3'>[3]</a>
+http://www.stat.tamu.edu/~hart/652/collinear.pdf
+
+<a id='4'>[4]</a>
+https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 
 
 
