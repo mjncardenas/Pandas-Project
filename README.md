@@ -42,23 +42,6 @@ The second random forest model had an accuracy of around 60.70% using 100 n_esti
 The current random forest model is decent at predicting delayed, on-time, and early flights. Due to the early, on-time, and late flight sample size issue, adaptive or gradient boosting should be used rather than bootstrap aggregation. To further mitigate the smaller sample sizes issue, undersampling or SMOTEENN should be used as well. Further modeling should include weather data and adding the month the flight occurred to understand flight schedules better. The project as a whole can be improved by doing the following: using more years and airline data, using JavaScript to provide better in-depth visual data analysis.
 
 
-
-
-
-##### Project Outline
-
-1. Upload data CSV file into a Jupyter Notebook for cleaning
-2. Send raw data to Tableau for dashboard creation
-3. Clean data using Pandas
-4. Create data frames to send to Postgres database
-5. Crete SQLalchemy connection to database
-6. Write data frames to database
-7. Create new Jupyter Notebook for a machine learning model
-8. Upload clean data from database
-9. Create a machine learning model
-10. Execute model and create confusion matrix
-
-
 Figure 1
 
 
@@ -138,3 +121,16 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 * Biweekly zoom meetings
 * Communication via Slack or email will occur daily
 * In emergencies: call team members
+
+##### Project Outline
+
+1. Upload data CSV file into a Jupyter Notebook for cleaning
+2. Send raw data to Tableau for dashboard creation
+3. Clean data using Pandas
+4. Create data frames to send to Postgres database
+5. Crete SQLalchemy connection to database
+6. Write data frames to database
+7. Create new Jupyter Notebook for a machine learning model
+8. Upload clean data from database
+9. Create a machine learning model
+10. Execute model and create confusion matrix
