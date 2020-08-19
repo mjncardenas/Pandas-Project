@@ -2,46 +2,60 @@
 
 
 ## Abstract
-The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel and we want to improve our travel experience. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [[1]](#1). The orginal data source is from the United States Department of Transportaton [[2]](#2).
+
+The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel, and we want to improve our travel experience. Using the raw data with Tableau, questions such as which city or routes had the most delays. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [[1]](#1). The original data source is from the United States Department of Transportation [[2]](#2).
+
 
 ## Discussion
 
+
+### Tableau
+
+1. Which route had the most delays? Denver to Aspen
+2. Which airport had the most delays? Salt Lake International Airport
+3. Which days are the worst to fly on? Friday and Monday
+4. Which day is best to fly on? Thursday
+
+
+
 ### Preliminary Data Processing
 
-Flight data from 2009 was selected out of the Kaggle dataset due to the sheer size of data in each CSV file. Then the team seclected a single airline by selecting the callsign, 'OO', SkyWest Airlines and dropping the rest of the data. A NaN check was conducted and all NaNs were dropped. The data then needed to be transformed before continuing. Flight data required to be changed to the timestamp, then converted to a weekday, and then the weekday name. Delay status required to be changed to an integer type for machine learning. Then dataframes were created for each table to load into the database. These four tables are flight data, airport, flight status, and days of the week. The cleaned data was then uploaded to the PostgreSQL database and downloaded into the machine learning notebook using SQLalchemy.
+Flight data from 2009 was selected from the Kaggle dataset due to the sheer data size of each CSV file. Then the team selected a single airline by selecting the callsign, 'OO,' SkyWest Airlines, and dropping the rest of the data. A NaN check was conducted, and all NaNs were dropped. The date needed to be transformed to a timestamp before continuing. Then, the date was converted to a weekday number, and then it was converted to the day's name. Delay status needed to be changed to an integer type for machine learning. Then data frames were created for each table to load into the database. These four tables are flight data, airport, flight status, and days of the week. The cleaned data was then uploaded to the PostgreSQL database and downloaded into the machine learning notebook using SQLalchemy.
 
 ### Machine Learning Model
 
-The model's target is 'flight status' and the rest of the data remained as features. Dummy variables were assigned to the data and then split into train and test sets, using the default ratio. The machine learning model used in this project is a random forest model to avoid overfitting, the ability to rank significance of input variables, and beacuse it can run efficiently with large data sets. The downside to using this model is the user cannot determine how the random forest model arrived to its answer.
+The model's target is 'flight status,' and the rest of the data remained as features. Dummy variables were assigned to the data and split into train and test sets using the default ratio. The chosen machine learning model is a random forest model. The random forest was selected to avoid overfitting, its ability to rank the significance of input variables, and efficiency with large data sets. The downside to using this model is the user cannot determine how the random forest model arrived at its answer.
 
 ### Model Results
 
 #### First Model
 
-The first random forest model had an accuracy of around 60% (Figure 1). While this model can answer the team's question, "Which flights will be delayed?," it is a mediocre model. The features used in model one were: flight_id, fl_num, origin, dest, flight_status, and weekday. One error in the model is having flight_id as one of the features. Flight ID does not provide any useful information for the random forest. Another issue is having fl_num, origin, and dest as as features as well. Flight number, origin, and destinaton are collinear because each route is assinged a specific flight number. The issue here is colinearity will confound the model: "Collinearity tends to inflate the variance of at least one estimated regression coefficient,ˆβj.This can cause at least some regression coef-ficients to have the wrong sign [[3]](#3)." The sorted features by importance shows low percentages for each of the flight numbers and weekdays (Figure 2). The team hoped by removing the collinear features, these importance scores could be increased. Another issue with the model is its low F-1 score. In a travel scenario being late or early can cause issues for the traveller. Thus, a balance between precision and recall is required [[4]](#4).
+The first random forest model had an accuracy of around 60.81% using 64 n_estimators (Figure 1). The model is mediocre at answering which flights will be delayed. The features used in model one were: flight_id, fl_num, origin, dest, flight_status, and weekday. One error in the model is having flight_id as one of the features. Flight ID does not provide any useful information for the random forest. Another issue is using fl_num, origin, and dest as features as well. Flight number, origin, and destination are collinear because each route is assigned a specific flight number. The issue here is colinearity will confound the model: "Collinearity tends to inflate the variance of at least one estimated regression coefficient,ˆβj. This can cause at least some regression coefficients to have the wrong sign [[3]](#3)." The sorting features by importance show low percentages for each of the flight numbers and weekdays (Figure 2). The team hoped by removing the collinear features; these importance scores could be increased. Another issue with the model is its low F-1 score. In a travel scenario, being late or early can cause problems for the traveler. Thus, a balance between precision and recall is required [[4]](#4).
 
 #### Second Model
 
-The second random forest model had an accuracy of around 60% (Figure 3). Unfortunately, this was a minor improvement. The features sued in the moderl were: fl_num, flight_status, and weekday. The output for features sorted by importance barely changed [Figure 4]. 
+The second random forest model had an accuracy of around 60.70% using 100 n_estimators to improve the model's accuracy (Figure 3). It had a similar F-1 score as the first model. The output for features sorted by importance barely changed [Figure 4]. Unfortunately, there was little change in the model's output on its second execution and would not be suitable for field use. One issue that might remain is the discrepancy between the number of delayed, on-time, and early flights [Figure 3]. Due to this issue, both models had low F-1 scores for on-time flights. The second model made a slight improvement in the precision of identifying on-time flights.
 
 
 ## Conclusion
 
-ipsum lorem
+The current random forest model is decent at predicting delayed, on-time, and early flights. Due to the early, on-time, and late flight sample size issue, adaptive or gradient boosting should be used rather than bootstrap aggregation. To further mitigate the smaller sample sizes issue, undersampling or SMOTEENN should be used as well. Further modeling should include weather data and adding the month the flight occurred to understand flight schedules better. The project as a whole can be improved by doing the following: using more years and airline data, using JavaScript to provide better in-depth visual data analysis.
+
+
 
 
 
 ##### Project Outline
 
 1. Upload data CSV file into a Jupyter Notebook for cleaning
-2. Send raw data to Tableu for dashboard creation
+2. Send raw data to Tableau for dashboard creation
 3. Clean data using Pandas
-4. Create dataframes to send to Postgres database
-5. Crete sqlalchemy connection with database
-6. Write dataframes to database
-7. Create new Jupyter Notebook for machine learning model
+4. Create data frames to send to Postgres database
+5. Crete SQLalchemy connection to database
+6. Write data frames to database
+7. Create new Jupyter Notebook for a machine learning model
 8. Upload clean data from database
-9. Create machine learning model
+9. Create a machine learning model
 10. Execute model and create confusion matrix
 
 ##### References
@@ -127,5 +141,5 @@ Figure 4
 ##### Communication Protocol
 
 * Biweekly zoom meetings
-* Communication via Slack or email will occurr daily
-* In emergencies: call team member
+* Communication via Slack or email will occur daily
+* In emergencies: call team members
