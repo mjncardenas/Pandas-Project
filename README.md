@@ -3,7 +3,7 @@
 
 ## Abstract
 
-The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel, and we want to improve our travel experience. Using the raw data with Tableau, questions such as which city or routes had the most delays. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [[1]](#1). The original data source is from the United States Department of Transportation [[2]](#2).
+The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel, and we want to improve our travel experience. Using the raw data with Tableau, questions such as which city or routes had the most delays. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [[1]](#1). The original data source is from the United States Department of Transportation [[2]](#2). The technologies used in this project are: Excel, Jupyter Notebook, Python, Postres, Tableau, Github, Google Docs and Slides.
 
 
 ## Discussion
