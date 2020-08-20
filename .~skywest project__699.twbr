@@ -3522,7 +3522,7 @@
                 <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97590' id='1' param='vert' removable='false' w='98426' x='787' y='1205'>
                   <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='11898' id='4' paired-zone-id='5' removable='false' w='98426' x='787' y='1205' />
                   <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='85692' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='13103'>
-                    <flipboard active-id='4' nav-type='number' show-nav-arrows='true'>
+                    <flipboard active-id='3' nav-type='number' show-nav-arrows='true'>
                       <story-points>
                         <story-point captured-sheet='' id='1' />
                         <story-point captured-sheet='' id='12' />
@@ -3586,17 +3586,18 @@
             <run fontcolor='#4b39dd' fontname='Old Standard TT,serif' fontsize='18'>Æ </run>
           </formatted-text>
         </zone>
-        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='4669' hidden='true' id='13' story-point-id='3' w='30610' x='30118' y='12349'>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='4669' id='13' story-point-id='3' w='30610' x='30118' y='12349'>
           <formatted-text>
             <run fontname='Franklin Gothic Medium' fontsize='20'>US Cities with Most Delays</run>
           </formatted-text>
         </zone>
-        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='26355' hidden='true' id='14' story-point-id='2' w='25689' x='72146' y='53614'>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='26355' hidden='true' id='14' story-point-id='2' w='25689' x='72146' y='53614'>
           <formatted-text>
-            <run bold='true' fontname='Noto Sans Tai Viet' fontsize='20' underline='true'>Amount of Delayed Flights</run>
+            <run bold='true' fontname='Noto Sans Tai Viet' fontsize='20' underline='true'>Most Delayed Routes</run>
+            <run>Æ&#10;</run>
           </formatted-text>
         </zone>
-        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='5723' id='15' story-point-id='4' w='28150' x='33957' y='89307'>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='5723' hidden='true' id='15' story-point-id='4' w='28150' x='33957' y='89307'>
           <formatted-text>
             <run bold='true' fontcolor='#d81a30' fontname='Arial Rounded MT Bold' fontsize='24' underline='true'>Daily Flight Status</run>
           </formatted-text>
@@ -3688,7 +3689,7 @@
       </cards>
       <simple-id uuid='{51546AA4-8DB1-431E-A03C-8F12009BA49D}' />
     </window>
-    <window class='worksheet' maximized='true' name='US Cities with most delays'>
+    <window class='worksheet' name='US Cities with most delays'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -3817,7 +3818,7 @@
       <active id='18' />
       <simple-id uuid='{939BF232-CCFD-4187-BB33-EE13D040F88E}' />
     </window>
-    <window class='dashboard' name='Pandas Project Storyboard' tab-color='#72bcbb'>
+    <window class='dashboard' maximized='true' name='Pandas Project Storyboard' tab-color='#72bcbb'>
       <viewpoints />
       <active id='-1' />
       <simple-id uuid='{90FC4F0A-5788-4503-A059-FD75FA907AAE}' />
