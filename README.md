@@ -18,7 +18,7 @@ In rows, we placed the Count (Flight Status). This is continuous
 For the filter, we also placed the Flight Status but it is filtered to “Delay.”
 Lastly, we placed “Origin to Destination” in colors.
 Findings: Flights from Denver to Aspen has the most delays
-Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/Flight%20status.png)
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/delayed_routes.png)
 
 2. Which airport had the most delays? Salt Lake International Airport
 This map shows which US cities has the most delays
@@ -29,7 +29,7 @@ For this map, the Destination Longitude and Latitude were placed for columns and
 We placed flight status in filter, size and color.
 Findings: Salt Lake City International Airport has the most delays 
 
-Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/US%20Cities%20with%20most%20delays.png)
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/US_cities_delays.png)
 
 3. Which day of the week is the best to fly?
 Daily flight status
@@ -39,7 +39,7 @@ In order to create bar graph, we added “Flight Status” in columns.
 We also placed “Flight Status” and “Weekday” in rows.
  Findings: Best day to fly because it has the least amount of delays is Thursday. Worst day to fly is Friday followed by Monday.
 
-Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/Daily%20Flight%20Status.png)
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/Daily_Flight_Status.png)
 Which day is best to fly on? Thursday
 
 4. Interactive
@@ -49,7 +49,7 @@ After choosing the two airports, one will see the average of the total flight.
 In order to create this, we placed “Origin Airport” and “Destination Airport” in rows.
 To create filter, we placed “Flight Status,” “Origin Airport,” and “Destination Airport” in filter. 
 This interactive page can be used when you would like to know how likely your flight will be delayed.
-Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/origin%20to%20destination.png)
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/interactive.png)
 
 
 
