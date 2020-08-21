@@ -158,3 +158,7 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 8. Upload clean data from database
 9. Create a machine learning model
 10. Execute model and create confusion matrix
+
+Dashboard: https://public.tableau.com/profile/michelle.cardenas#!/vizhome/skywestproject/PandasProjectStoryboard?publish=yes
+Google Slides flashcards for presentation: https://docs.google.com/presentation/d/1OwAqNvC6R_ztFjqak5jTbcJXZBwkI31_YG8IKfRAUPQ/edit?usp=sharing
+Sample Dashboard: https://docs.google.com/presentation/d/1TuF1_l5AwxgvbOCYwFYlXY_Ghcyn62s73fqBKCvWS-M/edit?usp=sharing
