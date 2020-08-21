@@ -161,5 +161,3 @@ Dashboard: https://public.tableau.com/profile/michelle.cardenas#!/vizhome/skywes
 Google Slides flashcards for presentation: https://docs.google.com/presentation/d/1OwAqNvC6R_ztFjqak5jTbcJXZBwkI31_YG8IKfRAUPQ/edit?usp=sharing
 
 Sample Dashboard: https://docs.google.com/presentation/d/1TuF1_l5AwxgvbOCYwFYlXY_Ghcyn62s73fqBKCvWS-M/edit?usp=sharing
-
-
