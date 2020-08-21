@@ -3,18 +3,52 @@
 
 ## Abstract
 
-The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel, and we want to improve our travel experience. Using the raw data with Tableau, questions such as which city or routes had the most delays. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [[1]](#1). The original data source is from the United States Department of Transportation [[2]](#2). The technologies used in this project are: Excel, Jupyter Notebook, Python, Postres, Tableau, Github, Google Docs and Slides.
-
-
-## Discussion
-
+The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel, and we want to improve our travel experience. Using the raw data with Tableau, questions such as which city or routes had the most delays. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [[1]](#1). The original data source is from the United States Department of Transportation [[2]](#2).
 
 ### Tableau
 
-1. Which route had the most delays? Denver to Aspen
+
+Questions
+1. Which route had the most delays? 
+or this part of the dashboard, we will be using Tableau to create graph.
+We placed “Flight Status” and “Origin to Destination” in columns.
+In rows, we placed the Count (Flight Status). This is continuous
+For the filter, we also placed the Flight Status but it is filtered to “Delay.”
+Lastly, we placed “Origin to Destination” in colors.
+Findings: Flights from Denver to Aspen has the most delays
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/delayed_routes.png)
+
 2. Which airport had the most delays? Salt Lake International Airport
-3. Which days are the worst to fly on? Friday and Monday
-4. Which day is best to fly on? Thursday
+This map shows which US cities has the most delays
+The larger the circle the more the delays.
+The spectrum goes from blue to red, where red has the most and the blue the least amount of delays
+Tableau was also used to create the map.
+For this map, the Destination Longitude and Latitude were placed for columns and rows
+We placed flight status in filter, size and color.
+Findings: Salt Lake City International Airport has the most delays 
+
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/US_cities_delays.png)
+
+3. Which day of the week is the best to fly?
+Daily flight status
+This graph was created in Tableau
+This graph will show the total delay hours per day of the week.
+In order to create bar graph, we added “Flight Status” in columns.
+We also placed “Flight Status” and “Weekday” in rows.
+ Findings: Best day to fly because it has the least amount of delays is Thursday. Worst day to fly is Friday followed by Monday.
+
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/Daily_Flight_Status.png)
+Which day is best to fly on? Thursday
+
+4. Interactive
+Interactive section also created in Tableau
+For the interactive part of the dashboard, you will be able to choose the Origin Airport and the Destination Airport
+After choosing the two airports, one will see the average of the total flight.
+In order to create this, we placed “Origin Airport” and “Destination Airport” in rows.
+To create filter, we placed “Flight Status,” “Origin Airport,” and “Destination Airport” in filter. 
+This interactive page can be used when you would like to know how likely your flight will be delayed.
+Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/interactive.png)
+
 
 
 
@@ -84,20 +118,7 @@ Figure 3
 Figure 4
 
 
-
-
-
 ![Sorted Feature Importance #2](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_second_instance_sorted_features.png)
-
-
-
-
-
-
-
-
-
-
 
 
 ##### References
@@ -134,3 +155,4 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 8. Upload clean data from database
 9. Create a machine learning model
 10. Execute model and create confusion matrix
+

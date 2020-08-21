@@ -1,0 +1,3827 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.0801.1333                               -->
+<workbook source-build='2020.3.0 (20203.20.0801.1333)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='classic' />
+  <datasources>
+    <datasource caption='Skywest.csv' inline='true' name='federated.0vh1pue0ibnnpb14qhcsg1snfgta' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Complete_Updated_M2' name='textscan.1slrsht1i9cnst14h95z01gd631x'>
+            <connection class='textscan' directory='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project' filename='Complete_Updated_M2.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='skywest' name='textscan.030nor90t8yok419phbqh067zdus'>
+            <connection class='textscan' directory='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project' filename='skywest.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[skywest.csv].[Actual Arrive Time]' />
+              <expression op='[skywest.csv1].[Actual Arrive Time]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1slrsht1i9cnst14h95z01gd631x' name='skywest.csv' table='[skywest#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Flgiht Date' ordinal='1' />
+              <column datatype='string' name='Weekday' ordinal='2' />
+              <column datatype='string' name='Carrier' ordinal='3' />
+              <column datatype='integer' name='Flight Number' ordinal='4' />
+              <column datatype='string' name='Origin Airport' ordinal='5' />
+              <column datatype='string' name='Origin IATA Code' ordinal='6' />
+              <column datatype='real' name='Origin Longitude' ordinal='7' />
+              <column datatype='real' name='Origin Latitude' ordinal='8' />
+              <column datatype='string' name='Destination Airport' ordinal='9' />
+              <column datatype='string' name='Destination IATA Code' ordinal='10' />
+              <column datatype='real' name='Destination Longitude' ordinal='11' />
+              <column datatype='real' name='Destination Latitude' ordinal='12' />
+              <column datatype='string' name='Scheduled Departure Time' ordinal='13' />
+              <column datatype='string' name='Actual Departure Time' ordinal='14' />
+              <column datatype='string' name='Scheduled Ariival Time' ordinal='15' />
+              <column datatype='string' name='Actual Arrive Time' ordinal='16' />
+              <column datatype='integer' name='Ariival Deplay Time' ordinal='17' />
+              <column datatype='string' name='Flight Status' ordinal='18' />
+              <column datatype='string' name='Origin_to_Destination' ordinal='19' />
+            </columns>
+          </relation>
+          <relation connection='textscan.030nor90t8yok419phbqh067zdus' name='skywest.csv1' table='[skywest#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Flgiht Date' ordinal='1' />
+              <column datatype='string' name='Weekday' ordinal='2' />
+              <column datatype='string' name='Carrier' ordinal='3' />
+              <column datatype='integer' name='Flight Number' ordinal='4' />
+              <column datatype='string' name='Origin Airport' ordinal='5' />
+              <column datatype='string' name='Origin IATA Code' ordinal='6' />
+              <column datatype='real' name='Origin Longitude' ordinal='7' />
+              <column datatype='real' name='Origin Latitude' ordinal='8' />
+              <column datatype='string' name='Destination Airport' ordinal='9' />
+              <column datatype='string' name='Destination IATA Code' ordinal='10' />
+              <column datatype='real' name='Destination Longitude' ordinal='11' />
+              <column datatype='real' name='Destination Latitude' ordinal='12' />
+              <column datatype='string' name='Scheduled Departure Time' ordinal='13' />
+              <column datatype='string' name='Actual Departure Time' ordinal='14' />
+              <column datatype='string' name='Scheduled Ariival Time' ordinal='15' />
+              <column datatype='string' name='Actual Arrive Time' ordinal='16' />
+              <column datatype='integer' name='Ariival Deplay Time' ordinal='17' />
+              <column datatype='string' name='Flight Status' ordinal='18' />
+              <column datatype='string' name='Origin_to_Destination' ordinal='19' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[skywest.csv].[Actual Arrive Time]' />
+              <expression op='[skywest.csv1].[Actual Arrive Time]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1slrsht1i9cnst14h95z01gd631x' name='skywest.csv' table='[skywest#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Flgiht Date' ordinal='1' />
+              <column datatype='string' name='Weekday' ordinal='2' />
+              <column datatype='string' name='Carrier' ordinal='3' />
+              <column datatype='integer' name='Flight Number' ordinal='4' />
+              <column datatype='string' name='Origin Airport' ordinal='5' />
+              <column datatype='string' name='Origin IATA Code' ordinal='6' />
+              <column datatype='real' name='Origin Longitude' ordinal='7' />
+              <column datatype='real' name='Origin Latitude' ordinal='8' />
+              <column datatype='string' name='Destination Airport' ordinal='9' />
+              <column datatype='string' name='Destination IATA Code' ordinal='10' />
+              <column datatype='real' name='Destination Longitude' ordinal='11' />
+              <column datatype='real' name='Destination Latitude' ordinal='12' />
+              <column datatype='string' name='Scheduled Departure Time' ordinal='13' />
+              <column datatype='string' name='Actual Departure Time' ordinal='14' />
+              <column datatype='string' name='Scheduled Ariival Time' ordinal='15' />
+              <column datatype='string' name='Actual Arrive Time' ordinal='16' />
+              <column datatype='integer' name='Ariival Deplay Time' ordinal='17' />
+              <column datatype='string' name='Flight Status' ordinal='18' />
+              <column datatype='string' name='Origin_to_Destination' ordinal='19' />
+            </columns>
+          </relation>
+          <relation connection='textscan.030nor90t8yok419phbqh067zdus' name='skywest.csv1' table='[skywest#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='date' name='Flgiht Date' ordinal='1' />
+              <column datatype='string' name='Weekday' ordinal='2' />
+              <column datatype='string' name='Carrier' ordinal='3' />
+              <column datatype='integer' name='Flight Number' ordinal='4' />
+              <column datatype='string' name='Origin Airport' ordinal='5' />
+              <column datatype='string' name='Origin IATA Code' ordinal='6' />
+              <column datatype='real' name='Origin Longitude' ordinal='7' />
+              <column datatype='real' name='Origin Latitude' ordinal='8' />
+              <column datatype='string' name='Destination Airport' ordinal='9' />
+              <column datatype='string' name='Destination IATA Code' ordinal='10' />
+              <column datatype='real' name='Destination Longitude' ordinal='11' />
+              <column datatype='real' name='Destination Latitude' ordinal='12' />
+              <column datatype='string' name='Scheduled Departure Time' ordinal='13' />
+              <column datatype='string' name='Actual Departure Time' ordinal='14' />
+              <column datatype='string' name='Scheduled Ariival Time' ordinal='15' />
+              <column datatype='string' name='Actual Arrive Time' ordinal='16' />
+              <column datatype='integer' name='Ariival Deplay Time' ordinal='17' />
+              <column datatype='string' name='Flight Status' ordinal='18' />
+              <column datatype='string' name='Origin_to_Destination' ordinal='19' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Actual Arrive Time (skywest.csv1)]' value='[skywest.csv1].[Actual Arrive Time]' />
+          <map key='[Actual Arrive Time]' value='[skywest.csv].[Actual Arrive Time]' />
+          <map key='[Actual Departure Time (skywest.csv1)]' value='[skywest.csv1].[Actual Departure Time]' />
+          <map key='[Actual Departure Time]' value='[skywest.csv].[Actual Departure Time]' />
+          <map key='[Ariival Deplay Time (skywest.csv1)]' value='[skywest.csv1].[Ariival Deplay Time]' />
+          <map key='[Ariival Deplay Time]' value='[skywest.csv].[Ariival Deplay Time]' />
+          <map key='[Carrier (skywest.csv1)]' value='[skywest.csv1].[Carrier]' />
+          <map key='[Carrier]' value='[skywest.csv].[Carrier]' />
+          <map key='[Destination Airport (skywest.csv1)]' value='[skywest.csv1].[Destination Airport]' />
+          <map key='[Destination Airport]' value='[skywest.csv].[Destination Airport]' />
+          <map key='[Destination IATA Code (skywest.csv1)]' value='[skywest.csv1].[Destination IATA Code]' />
+          <map key='[Destination IATA Code]' value='[skywest.csv].[Destination IATA Code]' />
+          <map key='[Destination Latitude (skywest.csv1)]' value='[skywest.csv1].[Destination Latitude]' />
+          <map key='[Destination Latitude]' value='[skywest.csv].[Destination Latitude]' />
+          <map key='[Destination Longitude (skywest.csv1)]' value='[skywest.csv1].[Destination Longitude]' />
+          <map key='[Destination Longitude]' value='[skywest.csv].[Destination Longitude]' />
+          <map key='[F1 (skywest.csv1)]' value='[skywest.csv1].[F1]' />
+          <map key='[F1]' value='[skywest.csv].[F1]' />
+          <map key='[Flgiht Date (skywest.csv1)]' value='[skywest.csv1].[Flgiht Date]' />
+          <map key='[Flgiht Date]' value='[skywest.csv].[Flgiht Date]' />
+          <map key='[Flight Number (skywest.csv1)]' value='[skywest.csv1].[Flight Number]' />
+          <map key='[Flight Number]' value='[skywest.csv].[Flight Number]' />
+          <map key='[Flight Status (skywest.csv1)]' value='[skywest.csv1].[Flight Status]' />
+          <map key='[Flight Status]' value='[skywest.csv].[Flight Status]' />
+          <map key='[Origin Airport (skywest.csv1)]' value='[skywest.csv1].[Origin Airport]' />
+          <map key='[Origin Airport]' value='[skywest.csv].[Origin Airport]' />
+          <map key='[Origin IATA Code (skywest.csv1)]' value='[skywest.csv1].[Origin IATA Code]' />
+          <map key='[Origin IATA Code]' value='[skywest.csv].[Origin IATA Code]' />
+          <map key='[Origin Latitude (skywest.csv1)]' value='[skywest.csv1].[Origin Latitude]' />
+          <map key='[Origin Latitude]' value='[skywest.csv].[Origin Latitude]' />
+          <map key='[Origin Longitude (skywest.csv1)]' value='[skywest.csv1].[Origin Longitude]' />
+          <map key='[Origin Longitude]' value='[skywest.csv].[Origin Longitude]' />
+          <map key='[Origin_to_Destination (skywest.csv1)]' value='[skywest.csv1].[Origin_to_Destination]' />
+          <map key='[Origin_to_Destination]' value='[skywest.csv].[Origin_to_Destination]' />
+          <map key='[Scheduled Ariival Time (skywest.csv1)]' value='[skywest.csv1].[Scheduled Ariival Time]' />
+          <map key='[Scheduled Ariival Time]' value='[skywest.csv].[Scheduled Ariival Time]' />
+          <map key='[Scheduled Departure Time (skywest.csv1)]' value='[skywest.csv1].[Scheduled Departure Time]' />
+          <map key='[Scheduled Departure Time]' value='[skywest.csv].[Scheduled Departure Time]' />
+          <map key='[Weekday (skywest.csv1)]' value='[skywest.csv1].[Weekday]' />
+          <map key='[Weekday]' value='[skywest.csv].[Weekday]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flgiht Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Flgiht Date]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Flgiht Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weekday</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Weekday]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Weekday</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Carrier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Carrier]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Carrier</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flight Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Flight Number]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Flight Number</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin Airport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Origin Airport]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Origin Airport</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin IATA Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Origin IATA Code]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Origin IATA Code</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Origin Longitude]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Origin Longitude</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Origin Latitude]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Origin Latitude</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination Airport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Destination Airport]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Destination Airport</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination IATA Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Destination IATA Code]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Destination IATA Code</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Destination Longitude]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Destination Longitude</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Destination Latitude]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Destination Latitude</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scheduled Departure Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Scheduled Departure Time]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Scheduled Departure Time</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Departure Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Actual Departure Time]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Actual Departure Time</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scheduled Ariival Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Scheduled Ariival Time]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Scheduled Ariival Time</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Arrive Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Actual Arrive Time]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Actual Arrive Time</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ariival Deplay Time</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ariival Deplay Time]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Ariival Deplay Time</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flight Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Flight Status]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Flight Status</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin_to_Destination</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Origin_to_Destination]</local-name>
+            <parent-name>[skywest.csv]</parent-name>
+            <remote-alias>Origin_to_Destination</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1 (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flgiht Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Flgiht Date (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Flgiht Date</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Weekday</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Weekday (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Weekday</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Carrier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Carrier (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Carrier</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flight Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Flight Number (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Flight Number</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin Airport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Origin Airport (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Origin Airport</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin IATA Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Origin IATA Code (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Origin IATA Code</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Origin Longitude (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Origin Longitude</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Origin Latitude (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Origin Latitude</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination Airport</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Destination Airport (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Destination Airport</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination IATA Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Destination IATA Code (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Destination IATA Code</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Destination Longitude (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Destination Longitude</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Destination Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Destination Latitude (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Destination Latitude</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scheduled Departure Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Scheduled Departure Time (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Scheduled Departure Time</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Departure Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Actual Departure Time (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Actual Departure Time</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scheduled Ariival Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Scheduled Ariival Time (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Scheduled Ariival Time</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actual Arrive Time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Actual Arrive Time (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Actual Arrive Time</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ariival Deplay Time</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ariival Deplay Time (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Ariival Deplay Time</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flight Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Flight Status (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Flight Status</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin_to_Destination</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Origin_to_Destination (skywest.csv1)]</local-name>
+            <parent-name>[skywest.csv1]</parent-name>
+            <remote-alias>Origin_to_Destination</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Destination Airport1' datatype='string' name='[Destination Airport]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Destination Latitude (skywest.csv1)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Destination Latitude1' datatype='real' name='[Destination Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Destination Longitude (skywest.csv1)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Destination Longitude1' datatype='real' name='[Destination Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' name='[Flight Number (skywest.csv1)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Flight Number]' role='dimension' type='ordinal' />
+      <column caption='Flight Status1' datatype='string' name='[Flight Status]' role='dimension' type='nominal' />
+      <column caption='Origin Airport1' datatype='string' name='[Origin Airport]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Origin Latitude (skywest.csv1)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Origin Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Origin Longitude (skywest.csv1)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Origin Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Origin to Destination (skywest.csv1)' datatype='string' name='[Origin_to_Destination (skywest.csv1)]' role='dimension' type='nominal' />
+      <column caption='Origin to Destination' datatype='string' name='[Origin_to_Destination]' role='dimension' type='nominal' />
+      <column caption='Weekday1' datatype='string' name='[Weekday]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='skywest.csv' datatype='table' name='[__tableau_internal_object_id__].[skywest.csv_4A8289BA41564F8DB9E018E28ED5737D]' role='measure' type='quantitative' />
+      <column-instance column='[Origin_to_Destination]' derivation='None' name='[none:Origin_to_Destination:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Flight Status1,Origin to Destination)' hidden='true' name='[Action (Flight Status1,Origin to Destination)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Flight Status]' />
+          <groupfilter function='level-members' level='[Origin_to_Destination]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Origin_to_Destination:nk]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;DEN to SLC&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ACV to SLC&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ATL to MEM&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;AUS to SLC&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;BUR to DEN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CLE to ORD&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;DAY to MKE&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;DEN to DSM&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;DEN to LIT&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;DEN to SGF&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ELP to DEN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;GCC to RKS&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;HLN to SLC&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;LAS to FAT&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;LAX to PSP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;LNK to DEN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;MKE to DEN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;MSN to DEN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;OKC to SLC&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ORD to CLE&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ORD to LEX&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;ORD to SPI&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;PDX to SLC&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;RDD to SFO&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SBA to DEN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SFO to CEC&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SFO to SMF&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SLC to CLE&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SLC to LAS&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SLC to RAP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SMF to LAX&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;TWF to SLC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ABE to ORD&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ATL to CVG&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ATL to TLH&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;BNA to MKE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CHS to ATL&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;CPR to SLC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DEN to BUR&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DEN to GUC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DEN to PDX&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DSM to DEN&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;FAT to SFO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;GSP to ATL&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;IDA to SLC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;LAX to IPL&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;LAX to TUS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MFR to SFO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MKE to PIT&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MTJ to DEN&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ORD to AUS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ORD to FWA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ORD to PIT&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PDX to EUG&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;PSC to SLC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SAN to SLC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SEA to SLC&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SFO to PSP&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SLC to ASE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SLC to GJT&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SLC to OMA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SLC to SNA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TUL to DEN&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ABQ to SFO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ATL to HOU&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ATW to ORD&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;BOI to ORD&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CID to ORD&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;CVG to IAH&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DEN to COS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DEN to IAH&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DEN to PSP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DTW to AVP&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;FNT to MKE&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;GUC to SLC&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;IPL to LAX&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;LAX to OKC&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;LIT to ATL&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;MKE to BNA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;MOD to SFO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;OAK to SLC&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ORD to BOI&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ORD to IAH&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ORD to SBN&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;PDX to OTH&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;PSP to SFO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SAT to ORD&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SFO to BFL&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SFO to SAT&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SLC to BTM&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SLC to HLN&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SLC to PHX&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;SLC to TUS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;TUS to LAX&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ASE to LAX&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ATL to MSY&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;BFL to LAX&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;BZN to LAX&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CMH to ORD&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;DEN to ATW&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;DEN to FAR&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;DEN to MKE&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;DEN to TUS&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;EUG to SLC&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;GEG to SLC&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;IAH to ATL&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;LAX to ASE&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;LAX to SBA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MCI to ATL&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MKE to GRB&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MSO to SLC&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;OMA to SLC&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ORD to CVG&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ORD to MKE&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;ORD to TYS&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;PIA to DEN&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;RDU to ATL&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SBA to SLC&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SFO to FAT&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SGF to ORD&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SLC to DEN&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SLC to MCI&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SLC to SAN&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SNA to SFO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;XNA to DEN&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ACV to SMF&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ATL to MKE&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;AVP to ORD&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;BUR to SFO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CLE to SLC&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;DAY to ORD&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;DEN to DTW&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;DEN to LNK&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;EUG to DEN&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;GCC to SLC&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;HOU to ATL&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;LAS to PSP&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;LAX to RNO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;LNK to ORD&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MKE to DSM&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MSN to MKE&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;OMA to DEN&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ORD to CMH&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ORD to LNK&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;ORD to SYR&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;PHL to MKE&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;RDM to PDX&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SBA to LAX&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SFO to CIC&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SFO to SNA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SLC to COD&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SLC to LAX&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SLC to RDM&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SMF to SFO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;TYS to DEN&quot;</bucket>
+            </map>
+            <map to='#8ace7e'>
+              <bucket>&quot;SLC to SFO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ABQ to SLC&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ATL to IAH&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;AUS to ATL&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;BOI to SFO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CLD to LAX&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CVG to MSP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DEN to CVG&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DEN to ICT&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DEN to RAP&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DTW to DEN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;FSD to DEN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;HDN to DEN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;IYK to LAX&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;LAX to OXR&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;LIT to DEN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MKE to CLE&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MRY to DEN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;OKC to DEN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ORD to BZN&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ORD to ICT&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ORD to SDF&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;PDX to RDM&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;PSP to SLC&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SAT to SFO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SFO to BOI&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SFO to SBA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SLC to BUR&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SLC to IAH&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SLC to PIH&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;SLC to TWF&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;TUS to SFO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ATL to CHS&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ATL to SAT&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;BIS to DEN&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CEC to ACV&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;COS to SFO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;DEN to BNA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;DEN to GRR&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;DEN to OKC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;DFW to SLC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;FAT to LAX&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;GRR to MKE&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ICT to ORD&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;LAX to DFW&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;LAX to SMF&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MFR to DEN&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MKE to ORD&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MSY to SLC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ORD to ATL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ORD to FAR&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ORD to ORF&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;OXR to LAX&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;PNS to ATL&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ROA to ORD&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SEA to LAX&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SFO to OTH&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SLC to ABQ&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SLC to GCC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SLC to OAK&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SLC to SJC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SYR to ORD&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ABQ to DEN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ATL to DFW&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ATL to VPS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BNA to ORD&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CIC to RDD&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CRW to ORD&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DEN to BZN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DEN to HDN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DEN to PIA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DSM to MKE&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;FAT to SLC&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;GTF to DEN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;IND to DEN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;LAX to IYK&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;LAX to YUM&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MFR to SLC&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MLI to DEN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MTJ to LAX&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ORD to AVP&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ORD to GRB&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ORD to ROA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PDX to LAX&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;PSP to DEN&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SAT to ATL&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SFO to ABQ&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SFO to RDD&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SLC to AUS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SLC to GTF&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SLC to ONT&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;SLC to STL&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;TUL to ORD&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ATL to ASE&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ATL to PNS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;BIL to DEN&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CAK to ORD&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;COS to LAX&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;DEN to BIL&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;DEN to GEG&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;DEN to MSO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;DFW to LAX&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;FAT to DEN&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;GRB to ORD&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;IAH to SLC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;LAX to CLD&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;LAX to SJC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MEM to DEN&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MKE to MSP&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MSP to SLC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ORD to ABQ&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ORD to DSM&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ORD to OKC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;OTH to PDX&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PIT to MKE&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;RNO to SFO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SDF to ORD&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SFO to MRY&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SJC to SBA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SLC to FAT&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SLC to MSY&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;STL to SLC&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ACV to CEC&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ATL to LIT&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;AUS to DEN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;BOI to SLC&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CLE to DEN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CVG to ORD&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;DEN to DFW&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;DEN to IDA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;DEN to SAT&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;DTW to ORD&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;FSD to ORD&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;HDN to SLC&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;JAC to SLC&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;LAX to PDX&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;LMT to PDX&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;MKE to CMH&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;MRY to LAX&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;OKC to LAX&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ORD to CAK&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ORD to IND&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ORD to SGF&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;PDX to SEA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;RAP to DEN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SAT to SLC&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SFO to BUR&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SFO to SBP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SLC to BZN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SLC to IDA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SLC to PSC&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;SMF to ACV&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;TUS to SLC&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ASE to ORD&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ATL to MTJ&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;BFL to SFO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;BZN to ORD&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;COD to SLC&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;DEN to AUS&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;DEN to FAT&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;DEN to MLI&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;DEN to TYS&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;EWR to MKE&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;GJT to DEN&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;IAH to CVG&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;LAX to BFL&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;LAX to SBP&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MCI to SLC&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MKE to GRR&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MSP to ATL&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ONT to SFO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ORD to CWA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ORD to MLI&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;ORD to XNA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;PIA to ORD&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;RKS to GCC&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SBN to ORD&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SFO to LMT&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SGU to LAX&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SLC to DFW&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SLC to MFR&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SLC to SAT&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SNA to SLC&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;XNA to ORD&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ASE to SFO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ATL to ORD&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;BHM to DEN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;BZN to SFO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;COS to ATL&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;DEN to BFL&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;DEN to FCA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;DEN to MRY&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;DEN to XNA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;FAR to DEN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;GJT to SLC&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;IAH to DEN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;LAX to BOI&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;LAX to SEA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MDT to ABE&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MKE to IND&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MSP to CVG&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ONT to SLC&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ORD to DAY&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ORD to MSN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ORF to ATL&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;PIH to SLC&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;RKS to SLC&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SBP to LAX&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SFO to MFR&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SGU to SLC&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SLC to EKO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SLC to MSO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SLC to SBA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SPI to ORD&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;YUM to LAX&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ATL to AUS&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ATL to RDU&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;BIL to SLC&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CDC to SLC&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;COS to ORD&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;DEN to BIS&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;DEN to GJT&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;DEN to MTJ&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;DFW to ORD&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;FAT to LAS&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;GRR to DEN&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ICT to DEN&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;LAX to COS&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;LAX to SLC&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MEM to ORD&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MKE to OMA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MSY to ATL&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ORD to ASE&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ORD to DTW&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;ORD to OMA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;OTH to SFO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;PIT to ORD&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;RNO to SLC&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SEA to GEG&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SFO to ONT&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SJC to SLC&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SLC to FCA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SLC to MTJ&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SLC to SGU&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SUN to SLC&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;ATL to COS&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;ATL to STL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;BNA to DEN&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;CEC to SFO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;COS to SLC&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;DEN to BOI&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;DEN to GTF&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;DEN to OMA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;DRO to DEN&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;FAT to RDM&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;GRR to ORD&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;IDA to DEN&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;LAX to FAT&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;LAX to SMX&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MFR to PDX&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MKE to PHL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MTJ to ATL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;ORD to ATW&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;ORD to FSD&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;ORD to PIA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;PDX to DEN&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;PSC to DEN&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SAN to LAX&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SEA to PDX&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SFO to PDX&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SLC to ACV&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SLC to GEG&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SLC to OKC&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SLC to SMF&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TLH to ATL&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ASE to ATL&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ATL to MOB&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;AVP to PIA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;BUR to SLC&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CMH to DEN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;DEN to ABQ&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;DEN to ELP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;DEN to MEM&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;DEN to SMF&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;EUG to PDX&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;GEG to DEN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;HPN to ORD&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;LAS to SLC&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;LAX to SAN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;LWS to SLC&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MKE to EWR&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MSN to ORD&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;OMA to MKE&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ORD to COS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ORD to MBS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;ORD to TUL&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;PHX to LAX&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;RDM to SFO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SBA to SFO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SFO to COS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SFO to TUS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SLC to COS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SLC to LGB&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SLC to RKS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SMF to SLC&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;TYS to ORD&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;ASE to DEN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ACV to SFO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ATL to MCI&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;AUS to ORD&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;BTM to SLC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CLE to MKE&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CWA to ORD&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;DEN to DRO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;DEN to IND&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;DEN to SBA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;EKO to SLC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;FWA to ORD&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;HLN to DEN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;LAN to ORD&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;LAX to PHX&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;LMT to SFO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;MKE to DAY&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;MRY to SFO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;OKC to ORD&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ORD to CID&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ORD to LAN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ORD to SLC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;PDX to SFO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;RAP to SLC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SAV to ORD&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SFO to BZN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SFO to SLC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SLC to CDC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SLC to JAC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SLC to PSP&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SMF to DEN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;TVC to ORD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ABQ to LAX&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ATL to DTW&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ATW to DEN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BOI to DEN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CIC to SFO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CVG to ATL&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DEN to CID&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DEN to HLN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DEN to PIT&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DSM to ORD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;FCA to DEN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;GTF to SLC&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;IND to MKE&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;LAX to MRY&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;LEX to ORD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MKE to ATL&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MLI to ORD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MTJ to ORD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ORD to BHM&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ORD to GRR&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ORD to SAT&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PDX to LMT&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PSP to LAS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SAT to DEN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SFO to ACV&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SFO to RDM&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SLC to BIL&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SLC to GUC&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SLC to ORD&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SLC to SUN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;TUL to SLC&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ASE to SLC&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ATL to ORF&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;BHM to ORD&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;BZN to SLC&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;COS to DEN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;DEN to BHM&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;DEN to FSD&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;DEN to MSN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;DFW to ATL&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;FAR to ORD&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;GRB to MKE&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;IAH to ORD&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;LAX to BZN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;LAX to SGU&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MEM to ATL&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MKE to MSN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MSP to MKE&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ORD to ABE&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ORD to DFW&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ORD to MTJ&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;ORF to ORD&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PIT to DEN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;RNO to LAX&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SBP to SFO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SFO to MOD&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SJC to LAX&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SLC to EUG&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SLC to MSP&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SLC to SEA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;STL to ATL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;ATL to MSP&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;BFL to DEN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;BZN to DEN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CMH to MKE&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;DEN to ASE&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;DEN to EUG&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;DEN to MFR&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;DEN to TUL&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;EUG to SFO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;GEG to SEA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;HSV to DEN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;LAX to ABQ&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;LAX to SAT&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MBS to ORD&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MKE to FNT&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MSO to DEN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;OMA to ORD&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;ORD to CRW&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;ORD to MEM&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;ORD to TVC&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;PHX to SLC&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;RDM to SLC&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SBA to SJC&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SFO to EUG&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SGF to DEN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SLC to CPR&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SLC to LWS&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SLC to RNO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SMX to LAX&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;VPS to ATL&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ABQ to ORD&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ATL to GSP&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ATW to MKE&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;BOI to LAX&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CID to DEN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CVG to DEN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DEN to CLE&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DEN to HSV&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DEN to PSC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;DTW to ATL&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;FCA to SLC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;GUC to DEN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;IND to ORD&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;LAX to MTJ&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;LGB to SLC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MKE to ATW&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MOB to ATL&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MTJ to SLC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ORD to BNA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ORD to HPN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ORD to SAV&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;PDX to MFR&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;PSP to LAX&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SAT to LAX&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SFO to ASE&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SFO to RNO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SLC to BOI&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SLC to HDN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SLC to PDX&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;SLC to TUL&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;TUS to DEN&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='skywest.csv' id='skywest.csv_4A8289BA41564F8DB9E018E28ED5737D'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[skywest.csv].[Actual Arrive Time]' />
+                    <expression op='[skywest.csv1].[Actual Arrive Time]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.1slrsht1i9cnst14h95z01gd631x' name='skywest.csv' table='[skywest#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Flgiht Date' ordinal='1' />
+                    <column datatype='string' name='Weekday' ordinal='2' />
+                    <column datatype='string' name='Carrier' ordinal='3' />
+                    <column datatype='integer' name='Flight Number' ordinal='4' />
+                    <column datatype='string' name='Origin Airport' ordinal='5' />
+                    <column datatype='string' name='Origin IATA Code' ordinal='6' />
+                    <column datatype='real' name='Origin Longitude' ordinal='7' />
+                    <column datatype='real' name='Origin Latitude' ordinal='8' />
+                    <column datatype='string' name='Destination Airport' ordinal='9' />
+                    <column datatype='string' name='Destination IATA Code' ordinal='10' />
+                    <column datatype='real' name='Destination Longitude' ordinal='11' />
+                    <column datatype='real' name='Destination Latitude' ordinal='12' />
+                    <column datatype='string' name='Scheduled Departure Time' ordinal='13' />
+                    <column datatype='string' name='Actual Departure Time' ordinal='14' />
+                    <column datatype='string' name='Scheduled Ariival Time' ordinal='15' />
+                    <column datatype='string' name='Actual Arrive Time' ordinal='16' />
+                    <column datatype='integer' name='Ariival Deplay Time' ordinal='17' />
+                    <column datatype='string' name='Flight Status' ordinal='18' />
+                    <column datatype='string' name='Origin_to_Destination' ordinal='19' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.030nor90t8yok419phbqh067zdus' name='skywest.csv1' table='[skywest#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='date' name='Flgiht Date' ordinal='1' />
+                    <column datatype='string' name='Weekday' ordinal='2' />
+                    <column datatype='string' name='Carrier' ordinal='3' />
+                    <column datatype='integer' name='Flight Number' ordinal='4' />
+                    <column datatype='string' name='Origin Airport' ordinal='5' />
+                    <column datatype='string' name='Origin IATA Code' ordinal='6' />
+                    <column datatype='real' name='Origin Longitude' ordinal='7' />
+                    <column datatype='real' name='Origin Latitude' ordinal='8' />
+                    <column datatype='string' name='Destination Airport' ordinal='9' />
+                    <column datatype='string' name='Destination IATA Code' ordinal='10' />
+                    <column datatype='real' name='Destination Longitude' ordinal='11' />
+                    <column datatype='real' name='Destination Latitude' ordinal='12' />
+                    <column datatype='string' name='Scheduled Departure Time' ordinal='13' />
+                    <column datatype='string' name='Actual Departure Time' ordinal='14' />
+                    <column datatype='string' name='Scheduled Ariival Time' ordinal='15' />
+                    <column datatype='string' name='Actual Arrive Time' ordinal='16' />
+                    <column datatype='integer' name='Ariival Deplay Time' ordinal='17' />
+                    <column datatype='string' name='Flight Status' ordinal='18' />
+                    <column datatype='string' name='Origin_to_Destination' ordinal='19' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Amount of Delayed Flights' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Origin to Destination' />
+        <param name='target' value='Amount of Delayed Flights' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Pandas Project' type='sheet' worksheet='Amount of Delayed Flights' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Pandas Project' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated) 1' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Pandas Project (2)' type='sheet' worksheet='Amount of Delayed Flights' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Pandas Project (2)' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Airports with most Delays'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Flight Status According to Origin and Destination
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Skywest.csv' name='federated.0vh1pue0ibnnpb14qhcsg1snfgta' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vh1pue0ibnnpb14qhcsg1snfgta'>
+            <column caption='Destination Airport1' datatype='string' name='[Destination Airport]' role='dimension' type='nominal' />
+            <column caption='Flight Status1' datatype='string' name='[Flight Status]' role='dimension' type='nominal' />
+            <column caption='Origin Airport1' datatype='string' name='[Origin Airport]' role='dimension' type='nominal' />
+            <column-instance column='[Flight Status]' derivation='Count' name='[cnt:Flight Status:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Destination Airport]' derivation='None' name='[none:Destination Airport:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Flight Status]' derivation='None' name='[none:Flight Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Origin Airport]' derivation='None' name='[none:Origin Airport:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]'>
+            <groupfilter function='level-members' level='[none:Destination Airport:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([Flight Status])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Flight Status:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Origin Airport:nk]' member='&quot;Bert Mooney Airport, Butee (BTM)&quot;' />
+              <groupfilter function='member' level='[none:Origin Airport:nk]' member='&quot;Bishop International Airport, Flint, (FNT)&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]' member-value='&quot;Delayed&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]</column>
+            <column>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]</column>
+            <column>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]' value='103' />
+            <format attr='height' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' value='29' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]' value='152' />
+            <format attr='width' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' value='128' />
+            <format attr='height-header' value='16' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk] / [federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk])</rows>
+        <cols>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]</cols>
+      </table>
+      <simple-id uuid='{BAA8E3C4-0BC2-471F-8063-387FB3043C12}' />
+    </worksheet>
+    <worksheet name='Amount of Delayed Flights'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Skywest.csv' name='federated.0vh1pue0ibnnpb14qhcsg1snfgta' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vh1pue0ibnnpb14qhcsg1snfgta'>
+            <column caption='Flight Status1' datatype='string' name='[Flight Status]' role='dimension' type='nominal' />
+            <column caption='Origin to Destination' datatype='string' name='[Origin_to_Destination]' role='dimension' type='nominal' />
+            <column-instance column='[Flight Status]' derivation='Count' name='[cnt:Flight Status:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Flight Status]' derivation='None' name='[none:Flight Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Origin_to_Destination]' derivation='None' name='[none:Origin_to_Destination:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]'>
+            <groupfilter function='member' level='[none:Flight Status:nk]' member='&quot;Delayed&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin_to_Destination:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([Flight Status])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Origin_to_Destination:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin_to_Destination:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]</column>
+            <column>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin_to_Destination:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin_to_Destination:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]</rows>
+        <cols>([federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk] / [federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin_to_Destination:nk])</cols>
+      </table>
+      <simple-id uuid='{43B5BD06-5196-40BE-8BD2-E87C90D87200}' />
+    </worksheet>
+    <worksheet name='Day of the week with most delay'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Daily Flight Status</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Skywest.csv' name='federated.0vh1pue0ibnnpb14qhcsg1snfgta' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vh1pue0ibnnpb14qhcsg1snfgta'>
+            <column caption='Flight Status1' datatype='string' name='[Flight Status]' role='dimension' type='nominal' />
+            <column caption='Weekday1' datatype='string' name='[Weekday]' role='dimension' type='nominal' />
+            <column-instance column='[Flight Status]' derivation='Count' name='[cnt:Flight Status:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Flight Status]' derivation='None' name='[none:Flight Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Weekday]' derivation='None' name='[none:Weekday:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Weekday:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk] / [federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Weekday:nk])</rows>
+        <cols>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]</cols>
+      </table>
+      <simple-id uuid='{65A54082-2E7A-418C-836B-2CF75F4C027F}' />
+    </worksheet>
+    <worksheet name='US Cities with most delays'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>US Cities with Most Delays</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Skywest.csv' name='federated.0vh1pue0ibnnpb14qhcsg1snfgta' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0vh1pue0ibnnpb14qhcsg1snfgta'>
+            <column datatype='string' name='[Destination IATA Code]' role='dimension' type='nominal' />
+            <column aggregation='Avg' caption='Destination Latitude1' datatype='real' name='[Destination Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Destination Longitude1' datatype='real' name='[Destination Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Flight Status1' datatype='string' name='[Flight Status]' role='dimension' type='nominal' />
+            <column caption='Origin to Destination' datatype='string' name='[Origin_to_Destination]' role='dimension' type='nominal' />
+            <column-instance column='[Destination IATA Code]' derivation='Attribute' name='[attr:Destination IATA Code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Flight Status]' derivation='Count' name='[cnt:Flight Status:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Destination Latitude]' derivation='None' name='[none:Destination Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Destination Longitude]' derivation='None' name='[none:Destination Longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Flight Status]' derivation='None' name='[none:Flight Status:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[Action (Flight Status1,Origin to Destination)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Flight Status]' />
+              <groupfilter function='level-members' level='[Origin_to_Destination]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]'>
+            <groupfilter function='level-members' level='[none:Flight Status:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]</column>
+            <column>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[Action (Flight Status1,Origin to Destination)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Longitude:qk]' field-type='quantitative' max='-7943368.871458116' min='-14177048.953897372' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Latitude:qk]' field-type='quantitative' max='7088091.8830593824' min='2840736.8484419435' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' value='#f7e585' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='736000' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#1f0b9e</color>
+                <color>#3b2aa6</color>
+                <color>#5a4daf</color>
+                <color>#7d73b8</color>
+                <color>#a29dc1</color>
+                <color>#cacaca</color>
+                <color>#c6a6a8</color>
+                <color>#c38487</color>
+                <color>#c06367</color>
+                <color>#bd4348</color>
+                <color>#ba252a</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='size' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' field-type='quantitative' max-size='1' min-size='0' type='quantsize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='total' value='#f7e585' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' />
+              <size column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' />
+              <tooltip column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[attr:Destination IATA Code:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Destination IATA Code:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[attr:Destination IATA Code:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Count of Flight Status:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1.5292567014694214' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Latitude:qk]</rows>
+        <cols>[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{4FDD0FB6-A930-4D34-B0EE-943A51A9DA4D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 2'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#68e1a57e' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='Skywest.csv' name='federated.0vh1pue0ibnnpb14qhcsg1snfgta' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0vh1pue0ibnnpb14qhcsg1snfgta'>
+        <column caption='Destination Airport1' datatype='string' name='[Destination Airport]' role='dimension' type='nominal' />
+        <column caption='Origin Airport1' datatype='string' name='[Origin Airport]' role='dimension' type='nominal' />
+        <column-instance column='[Destination Airport]' derivation='None' name='[none:Destination Airport:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Origin Airport]' derivation='None' name='[none:Origin Airport:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='24250' id='1' name='Airports with most Delays' w='59100' x='2100' y='4625' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='57375' id='3' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]' w='16000' x='61200' y='6750' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='56500' id='4' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' w='16000' x='80900' y='6625' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='16' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='15' param='vert' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='57375' id='3' mode='checkdropdown' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]' w='16000' x='61200' y='6750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='56500' id='4' mode='checkdropdown' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' w='16000' x='80900' y='6625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='194' h='24250' id='1' is-fixed='true' name='Airports with most Delays' w='59100' x='2100' y='4625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{E4D0640E-3EEF-4E7F-A8ED-B296AAAE00E1}' />
+    </dashboard>
+    <dashboard name='Machine learning'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' h='99375' id='17' w='102500' x='500' y='-1000'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#5cdacc' />
+          </zone-style>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='45125' id='4' is-scaled='1' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/random_forest_first_instance_confusion_matrix.png' w='39400' x='7300' y='19125' />
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='4375' id='5' w='26900' x='37000' y='8875'>
+          <formatted-text>
+            <run bold='true' fontsize='22' underline='true'>Machine Learning</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='36625' id='18' is-centered='0' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/Screen Shot.png' w='43200' x='51400' y='24625' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='20' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='19' param='vert' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='4375' id='5' w='26900' x='37000' y='8875'>
+                  <formatted-text>
+                    <run bold='true' fontsize='22' underline='true'>Machine Learning</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' h='45125' id='4' is-fixed='true' is-scaled='1' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/random_forest_first_instance_confusion_matrix.png' w='39400' x='7300' y='19125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' h='36625' id='18' is-centered='0' is-fixed='true' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/Screen Shot.png' w='43200' x='51400' y='24625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A0D116A5-9A91-44A5-86F0-AC36805F583A}' />
+    </dashboard>
+    <dashboard name='Machine learning (2)'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' h='99375' id='17' w='102500' x='500' y='-1000'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#5cdacc' />
+          </zone-style>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' forceUpdate='true' h='45125' id='4' is-scaled='1' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/random_forest_second_instance_confusion_matrix.png' w='39400' x='7300' y='19125' />
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='4375' id='5' w='26900' x='37000' y='8875'>
+          <formatted-text>
+            <run bold='true' fontsize='22' underline='true'>Machine Learning</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='36625' id='18' is-centered='0' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/random_forest_second_instance_sorted_features.png' w='43200' x='51400' y='24625' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='20' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='19' param='vert' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='4375' id='5' w='26900' x='37000' y='8875'>
+                  <formatted-text>
+                    <run bold='true' fontsize='22' underline='true'>Machine Learning</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' forceUpdate='true' h='45125' id='4' is-fixed='true' is-scaled='1' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/random_forest_second_instance_confusion_matrix.png' w='39400' x='7300' y='19125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' h='36625' id='18' is-centered='0' is-fixed='true' param='/Users/michelle/Documents/Module4/20)Group Project/Pandas-Project/Resources/random_forest_second_instance_sorted_features.png' w='43200' x='51400' y='24625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{34AC46F2-D7A9-4E3A-965C-216DA82034DA}' />
+    </dashboard>
+    <dashboard name='Pandas Project'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#e15759' fontname='Superclarendon' fontsize='26'>Skywest Airlines</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#3acedd' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='Skywest.csv' name='federated.0vh1pue0ibnnpb14qhcsg1snfgta' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0vh1pue0ibnnpb14qhcsg1snfgta'>
+        <column caption='Destination Airport1' datatype='string' name='[Destination Airport]' role='dimension' type='nominal' />
+        <column caption='Origin Airport1' datatype='string' name='[Origin Airport]' role='dimension' type='nominal' />
+        <column-instance column='[Destination Airport]' derivation='None' name='[none:Destination Airport:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Origin Airport]' derivation='None' name='[none:Origin Airport:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='5' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' fixed-size='57' h='8125' id='7' is-fixed='true' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='89875' id='6' w='98400' x='800' y='9125' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='32000' id='10' name='US Cities with most delays' w='37800' x='300' y='8250' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8625' id='12' name='US Cities with most delays' pane-specification-id='2' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' w='14000' x='38900' y='14500' />
+        <zone h='37250' id='16' name='Day of the week with most delay' w='39100' x='55200' y='9875' />
+        <zone h='49125' id='21' name='Amount of Delayed Flights' w='45700' x='1800' y='47000' />
+        <zone h='29500' id='51' name='Airports with most Delays' w='42500' x='54000' y='52750' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='16000' id='53' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]' w='16000' x='57500' y='70500' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='16375' id='54' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' w='12200' x='75400' y='70125' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#e15759' fontname='Superclarendon' fontsize='26'>Skywest Airlines</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1350' minheight='1350' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='58' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='57' param='vert' w='98400' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' fixed-size='57' h='8125' id='7' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='256' h='32000' id='10' is-fixed='true' name='US Cities with most delays' w='37800' x='300' y='8250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8625' id='12' name='US Cities with most delays' pane-specification-id='2' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' w='14000' x='38900' y='14500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37250' id='16' is-fixed='true' name='Day of the week with most delay' w='39100' x='55200' y='9875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49125' id='21' is-fixed='true' name='Amount of Delayed Flights' w='45700' x='1800' y='47000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='16000' id='53' mode='checkdropdown' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]' w='16000' x='57500' y='70500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='16375' id='54' mode='checkdropdown' name='Airports with most Delays' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' w='12200' x='75400' y='70125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='236' h='29500' id='51' is-fixed='true' name='Airports with most Delays' w='42500' x='54000' y='52750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D8F9677E-8F6C-41AA-AAA3-659FF0F64EB8}' />
+    </dashboard>
+    <dashboard name='Pandas Project (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#e15759' fontname='Superclarendon' fontsize='26'>Skywest Airlines</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#3acedd' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='5' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='6' w='98400' x='800' y='1000' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='41375' id='10' name='US Cities with most delays' w='46600' x='2600' y='3000' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8625' id='12' name='US Cities with most delays' pane-specification-id='2' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' w='14000' x='49700' y='6750' />
+        <zone h='59375' id='16' name='Day of the week with most delay' w='42600' x='53900' y='21250' />
+        <zone h='49125' id='21' name='Amount of Delayed Flights' w='45700' x='1800' y='47000' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#e15759' fontname='Superclarendon' fontsize='26'>Skywest Airlines</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='54' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='53' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='41375' id='10' is-fixed='true' name='US Cities with most delays' w='46600' x='2600' y='3000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8625' id='12' name='US Cities with most delays' pane-specification-id='2' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' w='14000' x='49700' y='6750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='59375' id='16' is-fixed='true' name='Day of the week with most delay' w='42600' x='53900' y='21250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49125' id='21' is-fixed='true' name='Amount of Delayed Flights' w='45700' x='1800' y='47000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{90330CE9-6469-45BE-837F-18412828FF09}' />
+    </dashboard>
+    <dashboard name='Pandas Project Storyboard' type='storyboard'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#3acedd' />
+        </style-rule>
+        <style-rule element='story-description'>
+          <format attr='background-color' id='story-description_14' value='#ffffc8d9' />
+        </style-rule>
+        <style-rule element='story-point-caption'>
+          <format attr='background-color' value='#00000000' />
+        </style-rule>
+      </style>
+      <size maxheight='664' maxwidth='1016' minheight='664' minwidth='1016' sizing-mode='fixed' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97590' id='12' param='vert' removable='false' w='98426' x='787' y='1205'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97590' id='10' param='vert' removable='false' w='98426' x='787' y='1205'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97590' id='8' param='vert' removable='false' w='98426' x='787' y='1205'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97590' id='1' param='vert' removable='false' w='98426' x='787' y='1205'>
+                  <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='11898' id='4' paired-zone-id='5' removable='false' w='98426' x='787' y='1205' />
+                  <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='85692' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='13103'>
+                    <flipboard active-id='3' nav-type='number' show-nav-arrows='true'>
+                      <story-points>
+                        <story-point captured-sheet='' id='1' />
+                        <story-point captured-sheet='' id='12' />
+                        <story-point captured-sheet='' id='11' />
+                        <story-point captured-sheet='Amount of Delayed Flights' id='2' />
+                        <story-point captured-sheet='US Cities with most delays' id='3'>
+                          <capturedDeltas>
+                            <worksheet name='US Cities with most delays'>
+                              <style delta-type='added'>
+                                <style-rule element='axis'>
+                                  <encoding attr='space' class='0' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Latitude:qk]' field-type='quantitative' max='6552838.4481260767' min='2920276.4891054905' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                                  <encoding attr='space' class='0' field='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Longitude:qk]' field-type='quantitative' max='-8517937.4331066534' min='-13933876.792694245' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                                </style-rule>
+                              </style>
+                            </worksheet>
+                          </capturedDeltas>
+                        </story-point>
+                        <story-point captured-sheet='Day of the week with most delay' id='4' />
+                        <story-point captured-sheet='Dashboard 2' id='9'>
+                          <capturedDeltas>
+                            <worksheet name='Airports with most Delays'>
+                              <filter class='categorical' column='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]'>
+                                <groupfilter function='member' level='[none:Origin Airport:nk]' member='&quot;San Francisco International Airport (SFO)&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                              </filter>
+                            </worksheet>
+                          </capturedDeltas>
+                        </story-point>
+                        <story-point captured-sheet='Machine learning' id='8' />
+                        <story-point captured-sheet='Machine learning (2)' id='10'>
+                          <capturedDeltas>
+                            <dashboard name='Machine learning (2)'>
+                              <zone id='5'>
+                                <formatted-text>
+                                  <run bold='true' fontsize='22' underline='true'>Machine Learning (cont&apos;d)</run>
+                                </formatted-text>
+                              </zone>
+                            </dashboard>
+                          </capturedDeltas>
+                        </story-point>
+                        <story-point captured-sheet='' id='13' />
+                      </story-points>
+                    </flipboard>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='52386' hidden='true' id='6' story-point-id='1' w='96161' x='1673' y='8299'>
+          <formatted-text>
+            <run bold='true' fontcolor='#d81a30' fontname='Superclarendon' fontsize='28' underline='true'>Skywest Airlines</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#4b39dd' fontname='Superclarendon'>By: </run>
+            <run fontcolor='#4b39dd' fontname='Old Standard TT,serif' fontsize='12'>Max Keire, Jugvir Pabla, Michelle Cardenas</run>
+            <run fontcolor='#4b39dd' fontname='Old Standard TT,serif' fontsize='18'>Æ </run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='4669' id='13' story-point-id='3' w='30610' x='30118' y='12349'>
+          <formatted-text>
+            <run fontname='Franklin Gothic Medium' fontsize='20'>US Cities with Most Delays</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='26355' hidden='true' id='14' story-point-id='2' w='25689' x='72146' y='53614'>
+          <formatted-text>
+            <run bold='true' fontname='Noto Sans Tai Viet' fontsize='20' underline='true'>Most Delayed Routes</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='5723' hidden='true' id='15' story-point-id='4' w='28150' x='33957' y='89307'>
+          <formatted-text>
+            <run bold='true' fontcolor='#d81a30' fontname='Arial Rounded MT Bold' fontsize='24' underline='true'>Daily Flight Status</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='17169' hidden='true' id='16' story-point-id='11' w='46752' x='17913' y='9639'>
+          <formatted-text>
+            <run auto-url='true' bold='true' fontcolor='#000000' fontname='Old Standard TT,serif' fontsize='24' hyperlink='tabdoc:load-url url=&amp;quot;T&amp;quot;' underline='true'>T</run>
+            <run bold='true' fontcolor='#000000' fontname='Old Standard TT,serif' fontsize='24' underline='true'>ools Used Throughout the Project</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='56627' hidden='true' id='17' story-point-id='11' w='38091' x='21457' y='28163'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Microsoft </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Excel </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Jupyter Notebook</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Pandas</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>PG admin  (postgres)</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Tableau </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Python</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Github</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Google Docs </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Mishafi' fontsize='15'>Google Slides</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='12048' hidden='true' id='18' story-point-id='12' w='52165' x='20965' y='37500'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='.Arabic UI Text' fontsize='23'>Why we selected the topic</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' h='11145' hidden='true' id='20' story-point-id='13' w='57283' x='19783' y='11747'>
+          <formatted-text>
+            <run auto-url='true' fontalignment='0' fontcolor='#000000' fontname='Old Standard TT,serif' fontsize='23' hyperlink='tabdoc:load-url url=&amp;quot;T&amp;quot;'>T</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Old Standard TT,serif' fontsize='23'>hings to Improve Upon in the Future</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' flipboard-zone-id='5' forceUpdate='true' h='49398' hidden='true' id='21' story-point-id='13' w='75689' x='7677' y='28464'>
+          <formatted-text>
+            <run fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='16'>-</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>Add additional years to have even more accurate results</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>- Add more airlines,</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>-Determine which airlines has the best results from arriving early</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>-Create  a more interactive dashboard with flight routes</run>
+            <run fontalignment='0'>Æ&#10;</run>
+            <run fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>- Create a more in-depth analysis on the actual flight times ad arrivals.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{A73CBDD9-E490-4592-99AD-5168C23D0A45}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Amount of Delayed Flights'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin_to_Destination:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{51546AA4-8DB1-431E-A03C-8F12009BA49D}' />
+    </window>
+    <window class='worksheet' name='US Cities with most delays'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' type='size' />
+            <card pane-specification-id='2' param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[cnt:Flight Status:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{6CCF185C-86BE-434C-A56B-C4F6A8FA4AA6}' />
+    </window>
+    <window class='worksheet' name='Day of the week with most delay'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9763C45B-926C-40FF-9286-CC7CAA3A8B47}' />
+    </window>
+    <window class='worksheet' name='Airports with most Delays'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+          <strip size='100'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='138'>
+            <card param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Flight Status:nk]' type='filter' />
+            <card param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Origin Airport:nk]' type='filter' />
+            <card param='[federated.0vh1pue0ibnnpb14qhcsg1snfgta].[none:Destination Airport:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{51E27A13-4333-4672-9D84-6D876F3D7EA2}' />
+    </window>
+    <window class='dashboard' name='Pandas Project'>
+      <viewpoints>
+        <viewpoint name='Airports with most Delays' />
+        <viewpoint name='Amount of Delayed Flights'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Day of the week with most delay' />
+        <viewpoint name='US Cities with most delays'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='16' />
+      <simple-id uuid='{225CA98E-3C3F-4F7E-9A26-4FCCB8EDF67C}' />
+    </window>
+    <window class='dashboard' name='Pandas Project (2)'>
+      <viewpoints>
+        <viewpoint name='Amount of Delayed Flights'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Day of the week with most delay' />
+        <viewpoint name='US Cities with most delays'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{EB6EAFB1-EA0A-4768-9ED1-E04220B34CCD}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Airports with most Delays' />
+      </viewpoints>
+      <active id='1' />
+      <simple-id uuid='{CDFCCCD4-EEA9-4B75-B487-FAB62409EAC0}' />
+    </window>
+    <window class='dashboard' name='Machine learning'>
+      <viewpoints />
+      <active id='17' />
+      <simple-id uuid='{0742DAD5-122A-4E66-BEA7-2DD5E4466811}' />
+    </window>
+    <window class='dashboard' name='Machine learning (2)'>
+      <viewpoints />
+      <active id='18' />
+      <simple-id uuid='{939BF232-CCFD-4187-BB33-EE13D040F88E}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Pandas Project Storyboard' tab-color='#72bcbb'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{90FC4F0A-5788-4503-A059-FD75FA907AAE}' />
+    </window>
+  </windows>
+</workbook>
