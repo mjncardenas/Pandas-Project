@@ -5,11 +5,9 @@
 
 The team project's goal is to create a supervised machine learning model able to accurately predict which flights will be delayed based on flight number, origin, destination, and day of the week. The team decided on the topic of flight delays because we like to travel, and we want to improve our travel experience. Using the raw data with Tableau, questions such as which city or routes had the most delays. The project uses a dataset, created by Yuanyu 'Wendy' Mu on Kaggle, covering flight delays from 2009 to 2018 [[1]](#1). The original data source is from the United States Department of Transportation [[2]](#2).
 
-
-## Discussion
-
-
 ### Tableau
+
+
 Questions
 1. Which route had the most delays? 
 or this part of the dashboard, we will be using Tableau to create graph.
@@ -50,6 +48,7 @@ In order to create this, we placed “Origin Airport” and “Destination Airpo
 To create filter, we placed “Flight Status,” “Origin Airport,” and “Destination Airport” in filter. 
 This interactive page can be used when you would like to know how likely your flight will be delayed.
 Image- (https://github.com/mjncardenas/Pandas-Project/blob/michelle/Resources/interactive.png)
+
 
 
 
@@ -119,9 +118,7 @@ Figure 3
 Figure 4
 
 
-
 ![Sorted Feature Importance #2](https://github.com/mjncardenas/Pandas-Project/blob/max/Resources/images/random_forest_second_instance_sorted_features.png)
-
 
 
 ##### References
@@ -158,3 +155,4 @@ https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
 8. Upload clean data from database
 9. Create a machine learning model
 10. Execute model and create confusion matrix
+
